@@ -108,6 +108,9 @@ export const CollectibleForm = (props: FormProps) => {
             const formFile = form?.values?.content?.files?.[0]
             return (
               <FormControl isInvalid={errors.content && !!touched.content} isRequired id="content">
+
+Template:{ JSON.stringify(touched) }   formFile:{ JSON.stringify(formFile) }
+
                 <FileUploadField
                   initialFilePreview={
                     formFile

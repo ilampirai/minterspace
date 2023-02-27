@@ -3,11 +3,12 @@ import { HowItWorks, SupportingResources, Showcase, LoginText } from "ui/Home"
 
 import AppLayout from "../../../components/AppLayout"
 import { CollectibleCreateForm } from "../../../components/form/CollectibleCreateForm"
+import { Generateimage } from "../../../components/form/Generateimage"
 
 const NewItemPage = () => {
   return (
     <>
-      <AppLayout title="Create New NFT | MintMe">
+      <AppLayout title="Create New NFT | MintMe" showSidebar={true}>
         <VStack w="full" p="1rem" my="3rem" gap="3rem">
           <Center px={{ base: "0", md: "1rem" }} w="full" flexDirection="column">
             <Center mb={{ base: "1rem", md: "4rem" }} px={{ base: "0", md: "1.4rem" }}>
@@ -21,6 +22,12 @@ const NewItemPage = () => {
                 New Item
               </Heading>
             </Center>
+
+            <Center mb={{ base: "1rem", md: "4rem" }} px={{ base: "0", md: "1.4rem" }}>
+			
+              <Generateimage />  
+              </Center>
+
             <Flex
               minW={{ base: "100%", md: "800px" }}
               rounded="xl"
@@ -31,9 +38,7 @@ const NewItemPage = () => {
               <CollectibleCreateForm />
             </Flex>
           </Center>
-          <HowItWorks />
-          <SupportingResources />
-          <Showcase />
+           
         </VStack>
       </AppLayout>
     </>
