@@ -20,9 +20,9 @@ export const SideNav = (props: BoxProps & { onChange?: () => void }) => {
         onChange={props.onChange}
       />
       <SideNavItem
-        isActive={router.pathname == "/app/collection/generateimage"}
-        href="/app/collection/generateimage"
-        label="Generate Image"
+        isActive={router.pathname == "/app/new-item"}
+        href="/app/new-item"
+        label="Generate Image[A.I]"
         onChange={props.onChange}
       />
     </VStack>

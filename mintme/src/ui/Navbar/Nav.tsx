@@ -56,7 +56,7 @@ export const Navbar = ({ onOpen }) => {
             </Button>
           ),
         },
-        {
+        {/*
           href: "https://discord.gg/QAgDQXUGsU",
           component: (
             <ChakraLink
@@ -76,7 +76,7 @@ export const Navbar = ({ onOpen }) => {
               <BsDiscord size="2rem" color="#2D3436" />
             </ChakraLink>
           ),
-        },
+            */ },
       ]
     } else {
       return [
@@ -143,7 +143,7 @@ export const Navbar = ({ onOpen }) => {
             </Link>
           ),
         },
-        {
+        {/*
           href: "https://discord.gg/QAgDQXUGsU",
           component: (
             <ChakraLink
@@ -160,7 +160,7 @@ export const Navbar = ({ onOpen }) => {
               <BsDiscord size="1.5rem" color="#2D3436" />
             </ChakraLink>
           ),
-        },
+          */},
       ]
     }
   }, [session])
@@ -181,7 +181,7 @@ export const Navbar = ({ onOpen }) => {
             <Link href="/" passHref>
               <Image
                 boxSize={{ md: "70" }}
-                src="/mintme-logo-header.svg"
+                src="/mintme/MinterSpace_logo.png"
                 alt="logo"
                 zIndex="1000"
                 w={{ base: "6rem", md: "13rem" }}

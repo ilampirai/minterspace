@@ -7,17 +7,28 @@ import {   Flex, Stack, StackProps  ,Box,
   Center,
   Progress,
   Spinner,
-  CenterProps } from "@chakra-ui/react"
+  Text ,
+  Input,
+  Spacer,
+  FormControl,
+  FormLabel,
+  FormErrorMessage,
+  FormHelperText
+
+
+} from "@chakra-ui/react"
+ 
+ 
 import Masonry from "react-masonry-css"
 import axios from "axios";
-
+ 
  
 
 export const Generateimage = (props: StackProps) => {
   const [state, setState] = useState({});
-  const [totalcount, setCount] = useState(2);
+  const [loading, setLoading] = useState(0);
   const [prompt, setPrompt] = useState('sunny beach sunset');
-  const [steps, setSteps] = useState(4);
+  const [steps, setSteps] = useState(15);
   const [imageurl, setImage] = useState("");
 
 
@@ -31,8 +42,11 @@ export const Generateimage = (props: StackProps) => {
 
 
     async function fetchData(e) {
-      setImage('asdfasdfasd');
+      
       e.preventDefault();
+      setImage(''); 
+      setLoading(1); 
+      console.log('fetchdata');
 
       var data = JSON.stringify({
         "prompt": prompt,
@@ -41,103 +55,60 @@ export const Generateimage = (props: StackProps) => {
 
       var config = {
         method: 'post',
-        url: 'http://127.0.0.1:7861/sdapi/v1/txt2img',
+        url: 'https://208b-165-227-105-53.ngrok.io/sdapi/v1/txt2img',
         headers: { 
           'Content-Type': 'application/json'
         },
         data : data
       };
       
-      axios(config)
+       axios(config)
       .then(function (response) {
        // console.log(JSON.stringify(response.data));
 
         var res=JSON.parse(JSON.stringify(response.data));  console.log("res",res.images[0]);
         setImage("data:image/jpeg;base64,"+res.images[0]);
+        setLoading(0);
       })
       .catch(function (error) {
         console.log(error);
-      });
+        setLoading(0);
+      });  
       
-
-
-
-    }
-
-    async function getData(e) {
-      e.preventDefault();
-      //setImage('asdfasdfasd');
-      setImage('');
-      var number= Math.floor(Math.random() * 10);
-      var sampleurl="https://source.unsplash.com/random/200x200?sig="+number;
-
-      setImage(sampleurl);
-
+       
 
 
     }
+
+     
   
   return (
-    <Masonry
-    breakpointCols={{
-      default: 1,
-      1100: 3,
-      700: 2,
-      500: 1,
-    }}
-    className="masonry-grid"
-    columnClassName="masonry-grid_column"
-  >{/* Template:{ JSON.stringify(imageurl) } */}
+    <Stack spacing={3}>
+    
 
-      
+     {/* Template:{ JSON.stringify(imageurl) } */}
+ 
+     
+     
+   
+      <Stack spacing={4}>
+      <FormControl>
+        <FormLabel>Prompt</FormLabel>
+          <Input   placeholder="prompt" bg='blackAlpha.500'  type="text" value={prompt}  onChange={e => setPrompt(e.target.value)}/>
+          <FormHelperText>Please follow steps to generate image.</FormHelperText>
+      </FormControl>  
+             
+        {!loading && <Button   onClick={e => fetchData(e)}  alignSelf="center"  justifySelf="center"  colorScheme='blue'   size="sm" type="submit"  >  Generate New Image</Button> }
 
-       <form onSubmit={fetchData}>
-        <div className="input-field"> 
-         <input  placeholder="prompt"   type="text" value={prompt}  onChange={e => setPrompt(e.target.value)}/>
-        </div>
-        <br/> 
-        <div className="input-field"> 
-         <input  placeholder="steps"   type="number" value={steps}  onChange={e => setSteps(e.target.value)} />
-        </div>
-        <br/> 
-        <Button   alignSelf="center"
-          justifySelf="center"
-          variant="secondaryBold"
-          mt="2"
-          size="sm" type="submit"  >  Generate New Image</Button>
-      </form>
+        {loading==1 && <Button  isLoading    loadingText='Generating'  colorScheme='blue'  variant='outline'   >  Submit  </Button> }
 
-      <br/><br/>
-       prompt:{prompt}<br/>
-       steps:{steps}<br/>
+              
+        </Stack>  
 
-        {imageurl && <Center
-                    
-                    top="0"
-                    left="0"
-                    right="0"
-                    bottom="0"
-                    bgColor="rgba(0,0,0,0.4)"
-                    flexDirection="column"
-                    color="white"
-                    gap="0.4rem"
-                  >
-
-
-          <Image
-                  src={imageurl}
-                  alt="generated image"
-                  w="100%"
-                  maxH={"300px"}
-                  objectFit="contain"
-                  rounded="sm"
-                />
-
-           
-           
-        </Center>}
+        {imageurl && <Box boxSize='sm'>  <Image  src={imageurl}   alt="generated image"   w="100%"  maxH={"300px"}   objectFit="contain"  rounded="sm"    /> </Box>  }
 
         
-    </Masonry>
+     
+    </Stack>
   )
 }
