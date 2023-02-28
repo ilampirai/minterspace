@@ -1,4 +1,4 @@
-import { Box, Center, Flex, Heading, SimpleGrid, Text, VStack } from "@chakra-ui/react"
+import { Box, Center, Flex, Heading, SimpleGrid, Text, VStack,Image } from "@chakra-ui/react"
 import { useRef } from "react"
 
 const LinkTable = {
@@ -29,7 +29,22 @@ const LinkTable = {
 
     {
       url: "https://mint.test.niftory.com/app/collection/d2856642-ef50-4708-9019-e8f0b86004c9?nftId=edb23981-8ee4-431c-9403-de049afa7efe",
+      image: "/mintme/3.png",
+    },
+
+    {
+      url: "https://mint.test.niftory.com/app/collection/d2856642-ef50-4708-9019-e8f0b86004c9?nftId=edb23981-8ee4-431c-9403-de049afa7efe",
       image: "/mintme/4.png",
+    },
+
+    {
+      url: "https://mint.test.niftory.com/app/collection/d2856642-ef50-4708-9019-e8f0b86004c9?nftId=edb23981-8ee4-431c-9403-de049afa7efe",
+      image: "/mintme/5.png",
+    },
+
+    {
+      url: "https://mint.test.niftory.com/app/collection/d2856642-ef50-4708-9019-e8f0b86004c9?nftId=edb23981-8ee4-431c-9403-de049afa7efe",
+      image: "/mintme/6.png",
     },
   ],
 
@@ -56,35 +71,39 @@ export const Showcase = () => {
       <Heading fontSize={{ base: "4xl", md: "5xl" }} textAlign="center" pb="1rem">
       Artworks powered by AI
       </Heading>
-      <SimpleGrid
-        minChildWidth={{ base: "full", md: "320px" }}
-        spacing="2rem"
-        maxW="1600px"
-        mt={{ base: "1rem", md: "2rem" }}
-        ref={gridRef}
-      >
+     
+      {/*
+      <SimpleGrid   columns={3} spacing={5}  maxW="1600px">
+        
+        
+      {LinkTable[process.env.NEXT_PUBLIC_ENV ?? "test"].map((item) => ( <Box bg='tomato'  h="320px"></Box> ))}
+
+
+        
+      </SimpleGrid>
+     */}
+     
+    
+     
+      <SimpleGrid   columns={{ base: 1, md: 2, md: 3 }}       >
         {LinkTable[process.env.NEXT_PUBLIC_ENV ?? "test"].map((item) => (
           <Box
-            as="a"
-            href={item.url}
-            target="_blank"
-            key={item.url}
-            background={`url("${item.image}")`}
-            flex="1"
-            h="320px"
+             
             rounded="lg"
             shadow="base"
-            backgroundSize="contain"
-            bgColor="content.400"
-            p="1rem"
-            bgRepeat="no-repeat"
-            bgPos="center"
-            cursor="pointer"
-            transition="0.3s"
-            _hover={{ transform: "scale(1.01)" }}
-          ></Box>
+             
+           
+            m='5'
+             
+             
+            
+            
+          >
+        <Image src={`${item.image}`} alt='AI'  borderRadius="xl"  />
+
+          </Box> 
         ))}
-      </SimpleGrid>
+        </SimpleGrid> 
     </Flex>
   )
 }

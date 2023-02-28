@@ -1,6 +1,6 @@
 import AppLayout from "../components/AppLayout"
 import { useAuthContext } from "../hooks/useAuthContext"
-import { Image,Center, Flex, Heading, Box, VStack, Text } from "@chakra-ui/react"
+import { Image,Center, Flex, Heading, Box, VStack, Text,SimpleGrid } from "@chakra-ui/react"
 import { useRouter } from "next/router"
 import { CollectibleCreateForm } from "../components/form/CollectibleCreateForm"
 import { LoginText } from "../ui/Home/LoginText"
@@ -61,6 +61,8 @@ const HomePage = () => {
           Join our community of creators and collectors today and start generating your own unique NFTs using stable diffusion technology and our open model approach. With our platform, anyone can own and appreciate digital art like never before.
            </p>
           <br />
+
+         
           
         </Box>
       </Box>
@@ -90,6 +92,13 @@ const HomePage = () => {
           </Flex> */}
 
           <LoginText />
+
+
+          
+
+
+
+
         </Box>
         <VStack
           mt="2rem"
@@ -103,8 +112,24 @@ const HomePage = () => {
           <ChevronDownIcon size="1.2rem" />
         </VStack>
         <HowItWorks ref={scrollRef} />
-        {/*<SupportingResources /> */}
-        <Showcase />
+        {/*<SupportingResources />
+        <Showcase /> */}
+
+
+        <Box h="100%" w="100%" bg="page.background" color="page.text"  >
+        <Box as="section" maxW="5xl" mx="auto"   px={{ base: "6", md: "8" }}>
+           
+
+          <Showcase />
+          
+        </Box>
+      </Box>
+
+
+
+
+
+
       </Center>
     </AppLayout>
   )
