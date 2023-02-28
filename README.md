@@ -13,3 +13,7 @@ When we goto know about flow hackathon, we started exploring all the tech and th
 - Stable diffusion Models
 - Nextjs for webinterface
 - Niftory for blockchain and minting
+
+### Credit
+Stable diffusion API - https://github.com/AUTOMATIC1111/stable-diffusion-webui
+Mintme - https://github.com/Niftory/niftory-samples/tree/main/mintme
