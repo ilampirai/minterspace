@@ -17,6 +17,8 @@ import {   Flex, Stack, StackProps  ,Box,
 
 
 } from "@chakra-ui/react"
+import {ArrowDownIcon } from '@chakra-ui/icons'
+
  
  
 import Masonry from "react-masonry-css"
@@ -102,10 +104,15 @@ export const Generateimage = (props: StackProps) => {
 
         {loading==1 && <Button  isLoading    loadingText='Generating'  colorScheme='blue'  variant='outline'   >  Submit  </Button> }
 
-              
+       
         </Stack>  
 
-        {imageurl && <Box boxSize='sm' alignSelf="center"  justifySelf="center">  <Image  src={imageurl}   alt="generated image"   w="100%"  maxH={"300px"}   objectFit="contain"  rounded="sm"    /> </Box>  }
+        {imageurl && <Box boxSize='sm' alignSelf="center"  justifySelf="center">  <Image  src={imageurl}   alt="generated image"   w="100%"  maxH={"300px"}   objectFit="contain"  rounded="sm"    /> 
+
+        <Text fontSize='lg' color='green'>  Drag image to Mint</Text>
+        <ArrowDownIcon w={8} h={8} color="green.500" />
+        
+        </Box>  }
 
         
      
