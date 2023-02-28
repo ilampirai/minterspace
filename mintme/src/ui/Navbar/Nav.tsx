@@ -180,9 +180,9 @@ export const Navbar = ({ onOpen }) => {
             )}
             <Link href="/" passHref>
               <Image
-                boxSize={{ md: "70" }}
+                 
                 src="/mintme/MinterSpace_logo.png"
-                alt="logo"
+                alt="logo1"
                 zIndex="1000"
                 w={{ base: "6rem", md: "13rem" }}
                 py="4px"

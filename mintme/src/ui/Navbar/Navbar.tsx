@@ -27,8 +27,8 @@ export const Navbar: React.FunctionComponent<Props> = ({
           height="100%"
         >
           <Box _hover={{ cursor: "pointer" }} as="a" rel="home" my={{ base: "0.2rem" }}>
-            <Stack direction="row" gap={{ base: "0.7rem" }} ml={{ base: "0.4rem", md: "2rem" }}>
-              <VisuallyHidden>niftory</VisuallyHidden>
+            <Stack direction="row" gap={{ base: "0.7rem" }} ml={{ base: "0.4rem", md: "0rem" }}>
+              <VisuallyHidden>Minterspace</VisuallyHidden>
               {leftComponent}
             </Stack>
           </Box>

@@ -95,7 +95,7 @@ export const Generateimage = (props: StackProps) => {
       <FormControl>
         <FormLabel>Prompt</FormLabel>
           <Input   placeholder="prompt" bg='blackAlpha.500'  type="text" value={prompt}  onChange={e => setPrompt(e.target.value)}/>
-          <FormHelperText>Please follow steps to generate image.</FormHelperText>
+          <FormHelperText>Example Prompts: busy city at night, realistic, 4k mountain, river, house, dawn, 4k</FormHelperText>
       </FormControl>  
              
         {!loading && <Button   onClick={e => fetchData(e)}  alignSelf="center"  justifySelf="center"  colorScheme='blue'   size="sm" type="submit"  >  Generate New Image</Button> }
@@ -105,7 +105,7 @@ export const Generateimage = (props: StackProps) => {
               
         </Stack>  
 
-        {imageurl && <Box boxSize='sm'>  <Image  src={imageurl}   alt="generated image"   w="100%"  maxH={"300px"}   objectFit="contain"  rounded="sm"    /> </Box>  }
+        {imageurl && <Box boxSize='sm' alignSelf="center"  justifySelf="center">  <Image  src={imageurl}   alt="generated image"   w="100%"  maxH={"300px"}   objectFit="contain"  rounded="sm"    /> </Box>  }
 
         
      

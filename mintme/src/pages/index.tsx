@@ -24,12 +24,10 @@ const HomePage = () => {
           <Center >
              
                <Image
-                boxSize={{ md: "150" }}
+                boxSize={{ md: "300" }}
                 src="/mintme/MinterSpace_logo3.png"
                 alt="logo"
-                 
-                w={{ base: "6rem", md: "13rem" }}
-                py="4px"
+                
               />
              
           </Center>

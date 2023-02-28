@@ -1,9 +1,11 @@
 import { BoxProps, HStack, VStack } from "@chakra-ui/react"
 import { useRouter } from "next/router"
 import { SideNavItem } from "./SideNavItem"
+ 
 
 export const SideNav = (props: BoxProps & { onChange?: () => void }) => {
   const router = useRouter()
+  
 
   return (
     <VStack {...props} spacing={2} mt="1rem" alignItems="start">
@@ -19,12 +21,12 @@ export const SideNav = (props: BoxProps & { onChange?: () => void }) => {
         label="Created By Me"
         onChange={props.onChange}
       />
-      <SideNavItem
+         <SideNavItem
         isActive={router.pathname == "/app/new-item"}
         href="/app/new-item"
         label="Generate Image[A.I]"
         onChange={props.onChange}
-      />
+      /> 
     </VStack>
   )
 }

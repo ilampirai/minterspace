@@ -13,9 +13,9 @@ export const SideNavItem = (props: SideNavItemProps) => {
   return (
     <Link href={href}>
       <Box
-        width={"90%"}
+        width={"80%"}
         backgroundColor={isActive ? "content.400" : "transparent"}
-        p="0.6rem 2rem"
+        p="0.6rem 1rem"
         borderEndEndRadius="5rem"
         borderTopEndRadius="5rem"
         cursor="pointer"
