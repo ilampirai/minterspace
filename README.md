@@ -1,20 +1,15 @@
-# Niftory
+# MinterSpace
 
-### web3 made easy
+### Generate images using A.I and mint them right away
 
-The [Niftory API](https://docs.niftory.com/home/v/api/) is a platform that any developer can use to integrate web3 concepts like NFTs in your application. Our platform will turbo-charge your time-to-market by abstracting away all blockchain complexity, so you can focus on experimenting, iterating quickly, and building rich web3 apps.
+Stable diffusion is revolutionizing digital artworks. And NFT's which is the proper way of protecting and monetization those beautiful artworks so we combined them both and give you MinterSpace
 
-Read the accompanying docs at [docs.niftory.com](https://docs.niftory.com).
+### Team effort
 
-### Check out the sample apps to get started:
+When we goto know about flow hackathon, we started exploring all the tech and things we can do. Only had 2 days to finish everthing as we started late. Flow gave us another 2 days time extension which gave us the energy to fully finish the project. we had a barebone version where you can generate and mint with no fancy UI. With the extra time we learned about niftory and start using its sample app as base and intregrated our A.I model into it. 
 
-- [Dapper Wallet Sample](https://dapper-storefront-sample.vercel.app) - A Next.js app designed for Dapper Wallet. This app is ready for you to skin and launch a Dapper wallet experience with signing in with Dapper, purchasing, and viewing collections.
-- [Walletless Onboarding] - Bring your users into web3 without a wallet! 
-- [Basic App](https://github.com/Niftory/niftory-samples/blob/main/basic-app/README.md) - A Next.js app for simple authentication, viewing, and transferring functionality.
-- [MintMe](https://mint.niftory.com/) - A full no-code minter built on the Niftory platform, with no other infrastructure needed! 
-- _More coming soon!_
-
-### Ready to start your own project?
-
-Go to [Niftory.com](https://niftory.com) to get started!
-AS
+### Tech used
+- Python for A.I image generation
+- Stable diffusion Models
+- Nextjs for webinterface
+- Niftory for blockchain and minting
