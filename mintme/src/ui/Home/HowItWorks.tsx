@@ -62,18 +62,18 @@ export const HowItWorks = forwardRef<HTMLDivElement>(function HowItWorks(props, 
 
         <Box flex={1}>
           <VStack alignItems="flex-starts" gap="1.2rem">
-            <Heading fontSize="3.6rem">CREATE, MINT, SHARE</Heading>
+            <Heading fontSize="2rem">Steps</Heading>
 
-            <ListItem index="1" title="Create Template">
-              <Text>Fill out basic information to create your NFT Template.</Text>
+            <ListItem index="1" title="Generate">
+              <Text>Create your own art with over powered A.I</Text>
             </ListItem>
 
-            <ListItem index="2" title="Mint an NFT">
-              <Text>Mint your NFT from the collection.</Text>
+            <ListItem index="2" title="Mint">
+              <Text>Mint your new and unique image into niftory blockchain</Text>
             </ListItem>
 
             <ListItem index="3" title="Share">
-              <Text>Share your NFTs with your community.</Text>
+              <Text>You can save it for your own collection or share it with your friends. Transfer of nft is never been easier</Text>
             </ListItem>
           </VStack>
         </Box>

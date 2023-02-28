@@ -6,7 +6,7 @@ import { CreatedNFTCollection } from "../../../../components/collection/CreatedN
 
 const CreatedCollectionPage = () => {
   return (
-    <AppLayout showSidebar={true} title="NFT Templates | MintMe">
+    <AppLayout showSidebar={true} title="NFT Templates | Minterspace">
       <CreatedNFTCollection />
     </AppLayout>
   )

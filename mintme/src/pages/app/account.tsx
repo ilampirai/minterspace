@@ -23,7 +23,7 @@ const AccountPage = () => {
 
   const fetching = walletFetching || isLoading
   return (
-    <AppLayout title="Account | MintMe ">
+    <AppLayout title="Account | Minterspace ">
       <Flex
         gap="10"
         textAlign="center"

@@ -5,7 +5,7 @@ import { UserNFTCollection } from "../../../components/collection/UserNFTCollect
 
 const CollectionPage = () => {
   return (
-    <AppLayout showSidebar={true} title="NFT Collection | MintMe">
+    <AppLayout showSidebar={true} title="NFT Collection | Minterspace">
       <UserNFTCollection />
     </AppLayout>
   )
