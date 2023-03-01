@@ -1,5 +1,8 @@
 # MinterSpace
 
+##Demo link
+https://8a711a09b751.in.ngrok.io/ 
+
 ### Generate images using A.I and mint them right away
 
 NFTs have become increasingly popular in recent years, allowing creators and collectors to buy and sell unique digital assets on blockchain platforms. However, the process of creating and minting NFTs can be daunting for those who are not familiar with blockchain technology, and the process of generating AI images can also be difficult and costly.
